@@ -3,9 +3,9 @@ import os.path
 INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.txt")
 
 
-def compute(inpt: str) -> int:
+def compute(input_str: str) -> int:
 
-    elf_raw_cal_list = inpt.split("\n\n")
+    elf_raw_cal_list = input_str.split("\n\n")
     elf_cal_list = [[int(cal_val) for cal_val in elf.split("\n")] for elf in elf_raw_cal_list]
     elf_agg_cal_list = [sum(cal_list) for cal_list in elf_cal_list]
 
@@ -28,9 +28,9 @@ def test_compute():
 
 10000"""
 
-    assert 24000 == compute(inpt=INPUT)
+    assert 24000 == compute(input_str=INPUT)
 
 
 if __name__ == "__main__":
     with open(INPUT_PATH) as f:
-        print(compute(inpt=f.read()))
+        print(compute(input_str=f.read()))

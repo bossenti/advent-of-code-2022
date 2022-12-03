@@ -6,7 +6,7 @@ INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.txt")
 def compute(inpt: str) -> int:
 
     elf_raw_cal_list = inpt.split("\n\n")
-    elf_cal_list = [[int(cal_val) for cal_val in elf.split("\n")] for elf in elf_raw_cal_list ]
+    elf_cal_list = [[int(cal_val) for cal_val in elf.split("\n")] for elf in elf_raw_cal_list]
     elf_agg_cal_list = sorted([sum(cal_list) for cal_list in elf_cal_list])[::-1]
 
     return sum(elf_agg_cal_list[:3])
