@@ -1,10 +1,19 @@
 import os.path
+import string
+from enum import Enum
 
 INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.txt")
 
 
 def compute(input_str: str) -> int:
-    return int(input_str)
+    items = [_ for _ in input_str.split("\n")]
+
+    score = 0
+    for item in items:
+        pass
+
+    return score
+
 
 def test_compute():
     INPUT = """"""
